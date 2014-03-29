@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 26
+/svn/!svn/ver/2/trunk/test
+END
+.buildpath
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/!svn/ver/2/trunk/test/.buildpath
+END
+index2.php
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/!svn/ver/2/trunk/test/index2.php
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/svn/!svn/ver/2/trunk/test/.project
+END
+index.php
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/svn/!svn/ver/2/trunk/test/index.php
+END

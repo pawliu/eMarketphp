@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/54/trunk/sklep/lib/classes/Swift/Signers
+END
+HeaderSigner.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/54/trunk/sklep/lib/classes/Swift/Signers/HeaderSigner.php
+END
+BodySigner.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/54/trunk/sklep/lib/classes/Swift/Signers/BodySigner.php
+END
+SMimeSigner.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/54/trunk/sklep/lib/classes/Swift/Signers/SMimeSigner.php
+END
+DKIMSigner.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/54/trunk/sklep/lib/classes/Swift/Signers/DKIMSigner.php
+END
+DomainKeySigner.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/54/trunk/sklep/lib/classes/Swift/Signers/DomainKeySigner.php
+END

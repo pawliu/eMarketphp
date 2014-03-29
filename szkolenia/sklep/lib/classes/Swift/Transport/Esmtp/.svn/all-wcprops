@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/54/trunk/sklep/lib/classes/Swift/Transport/Esmtp
+END
+AuthHandler.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/54/trunk/sklep/lib/classes/Swift/Transport/Esmtp/AuthHandler.php
+END
+Authenticator.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/54/trunk/sklep/lib/classes/Swift/Transport/Esmtp/Authenticator.php
+END

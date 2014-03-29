@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link type="text/css" href="css/bottom.css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery-2.0.3.js"></script>
+<script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
+<script type="text/javascript" src="js/jquery.pikachoose.js"></script>
+<script type="text/javascript" src="js/jquery.touchwipe.min.js"></script>
+<script src="js/grafiki.js"></script>
+<script language="javascript">
+	$(document).ready(function() {
+		wybranoKatalog();
+	});
+
+	var grafiki = [];
+	function wyswietl() {
+		var dane = przetwDane();
+		document.getElementById('galeria').innerHTML = "";
+		$(".pikachoose").PikaChoose({
+			carousel : true,
+			carouselVertical : true,
+			data : dane,
+			text : {
+				next : 'Nastepny',
+				previous : 'Poprzedni'
+			}
+		});
+	}
+
+	function przetwDane() {
+		var wynik = [];
+		for (var i = 0; i < grafiki.length; i++) {
+			var grafika = grafiki[i];
+			wynik.push({
+				"image" : grafika
+			});
+		}
+		return wynik;
+	}
+
+	function pokazKatalogZListy(element) {
+		ustawGrafikiDlaKatalogu(element.textContent);
+	}
+</script>
+</head>
+<body>
+	<select id=nazwaKatalogu onchange="wybranoKatalog()">
+		<option>pictures</option>
+		<option>pictures2</option>
+	</select>
+	</div>
+	</div>
+	<div class="pikachoose" id=galeria></div>
+</body>
+</html>

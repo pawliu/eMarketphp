@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 32
+/svn/!svn/ver/54/trunk/sklep/lib
+END
+preferences.php
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/54/trunk/sklep/lib/preferences.php
+END
+swift_required_pear.php
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/54/trunk/sklep/lib/swift_required_pear.php
+END
+swift_required.php
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/54/trunk/sklep/lib/swift_required.php
+END
+swift_init.php
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/54/trunk/sklep/lib/swift_init.php
+END
+mime_types.php
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/54/trunk/sklep/lib/mime_types.php
+END

@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Tytul</title>
+<style type="text/css">
+.mojStyl {
+	color: lime;
+	background-color: inactivecaption;
+}
+</style>
+<link rel="Stylesheet" type="text/css" href="styles/zewnetrzny.css" />
+</head>
+<body>
+	<div id="main" style="width: 300px; height: 500px; border: solid">
+<!-- 
+		<div>
+			<table border="solid">
+				<tr>
+					<td bgcolor="grey">Test tabeli</td>
+				<tr>
+			</table>
+			<label title="Test" border="solid">Test</label>
+		</div>
+		 -->
+		<div style="color: aqua; background-image: img/test.gif; width: 75%; border: solid; border-color: green;" >Naglówek</div>
+		<div class="mojStyl">Menu</div>		
+		<div class="mojZewnetrznyStyl">Treść</div>
+		<div class="mojZewnetrznyStyl mojZewnetrznyStyl2" style="color: aqua; text-align: left!important;">Stopka</div>
+		<div class="mojStyl">Menu2</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<test>
+	<element id='1'>
+		<nazwa value="Element 1"/>
+		<kod>Element 1</kod>
+	</element>
+	<element id='2'>
+		<nazwa value="Element 2"/>
+		<kod>Element 2</kod>
+	</element>
+</test>

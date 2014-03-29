@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Wstep do Javascript i Ajax</title>
+<script type="text/javascript" src="js/jquery-2.0.3.js"></script>
+<script type="text/javascript" src="js/xml.js"></script>
+<script type="text/javascript" src="js/json.js"></script>
+<script type="text/javascript">
+	function pobierzDane(text) {
+		//tworzenie obiektu zapytania HTTP
+		if (window.XMLHttpRequest) {// dla IE7+, Firefox, Chrome, Opera, Safari
+			xmlhttp = new XMLHttpRequest();
+		} else {// starsze IE (w sumie juz pomijalne)
+			xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		//akcja na zmiane stanu zapytania (na 'gotowy')
+		xmlhttp.onreadystatechange = function() {
+			//zapytanie przetworzone i gotowe oraz status HTTP=200 (czyli wszystko ok)
+			if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+				//dla diva dane ustaw html jako wynik zapytania
+				document.getElementById("dane").innerHTML = xmlhttp.responseText;
+			}else{
+				if(xmlhttp.readyState == 4){
+					alert("Blad "+xmlhttp.status);
+				}
+			}
+		}
+		xmlhttp.open("GET", "dane.php?dane=" + text, true);
+		xmlhttp.send();
+	}
+</script>
+</head>
+<body>
+	<div>
+		<button onclick="pobierzDane('Proste ladowanie')">Zaladuj
+			dane</button>
+		<button onclick="pobierzXml('dane/test.xml','dane')">Zaladuj
+			xml</button>
+		<button onclick="pobierzXml('xml.php','dane')">Zaladuj
+			xml</button>
+		<button onclick="pobierzDaneJson('json.php','dane')">Zaladuj
+			dane json</button>
+
+	</div>
+	<div id=dane></div>
+</body>
+</html>

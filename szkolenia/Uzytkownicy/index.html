@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Lista</title>
+<?php
+$cssFile= "styles/table.css";
+if(isset($_GET['red'])){
+	$cssFile= "styles/table2.css";
+} ?>
+<link rel="Stylesheet" type="text/css" href='<?php echo $cssFile; ?>' />
+</head>
+<body>
+	<?php
+		include_once 'utils/stale.php';
+		include_once 'konfiguracja.php';
+		$nazwy = wezNazwyZGet();
+		foreach($nazwy as $nazwa){
+		 	$konfiguracja=zbudujKonfiguracjeDla($nazwa);
+			if($konfiguracja->jestDostepna()){
+	 ?>
+	<div id=widok
+		<?php echo $konfiguracja->nazwaElementu; ?>>
+		<table>
+			<thead>
+				<tr>
+					<th></th>
+					<th></th>
+					<th>
+						<?php echo $konfiguracja->nazwaElementu; ?>
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<?php 
+					$wszystkie=$konfiguracja->repozytorium->znajdzWszystkie();
+					foreach($wszystkie as $element){
+				?>
+				<tr>
+					<td>Edytuj</td>
+					<td>Usuń</td>
+					<td width="100%"><a href='detale.php?id=<?php echo $element->getId(); ?> '>
+					<?php echo $element->podsumowanie(); ?></a></td>
+				</tr>
+				
+				<?php } ?>
+			</tbody>
+		</table>
+	</div>
+	<?php }} ?>
+</body>
+</html>

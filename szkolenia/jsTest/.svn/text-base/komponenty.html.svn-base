@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Przyklad "Simple data grid"</title>
+<link rel="stylesheet" href="css/simple.datagrid.css">
+<script type="text/javascript" src="js/jquery-2.0.3.js"></script>
+<script type="text/javascript" src="js/json.js"></script>
+<script type="text/javascript" src="js/simple.datagrid.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('#gridDiv').hide();
+	});
+	function budujGrid(lokalizacja) {
+		var odswiez = confirm("Odświeżyć?");
+		if (odswiez) {
+			$('#grid').simple_datagrid();
+			$('#gridDiv').show();
+			$('#grid').slideDown("slow");	
+		} else {
+			console.error("To wcale nie blad");
+			console.info("Nie odswiezone");
+		}
+
+	}
+	function schowajGrid(){
+		$('#gridDiv').fadeOut("slow");	
+	}
+</script>
+</head>
+<body>
+	Przyklad uzycia zewnetrznej kontrolki - wiecej informacji pod tym
+	<a href="http://mbraak.github.io/simple-data-grid/" target="_blank">adresem</a>
+
+	<label onclick="budujGrid('json.php')" style="background-color: lightblue">Zaladuj dane json jako
+		grid</label>
+	<label onclick="schowajGrid()" >Schowaj grid</label>
+	<div id=gridDiv style="position:absolute;">
+		<table id="grid" data-url="json.php">
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>Nazwa</th>
+					<th>Kod</th>
+				</tr>
+			</thead>
+		</table>
+	</div>
+</body>
+</html>

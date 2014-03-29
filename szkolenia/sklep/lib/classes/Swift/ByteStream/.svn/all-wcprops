@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/54/trunk/sklep/lib/classes/Swift/ByteStream
+END
+AbstractFilterableInputStream.php
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/54/trunk/sklep/lib/classes/Swift/ByteStream/AbstractFilterableInputStream.php
+END
+ArrayByteStream.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/54/trunk/sklep/lib/classes/Swift/ByteStream/ArrayByteStream.php
+END
+FileByteStream.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/54/trunk/sklep/lib/classes/Swift/ByteStream/FileByteStream.php
+END
+TemporaryFileByteStream.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/54/trunk/sklep/lib/classes/Swift/ByteStream/TemporaryFileByteStream.php
+END

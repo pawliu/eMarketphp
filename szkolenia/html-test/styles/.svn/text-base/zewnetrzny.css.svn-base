@@ -1,0 +1,13 @@
+@CHARSET "UTF-8";
+
+.mojZewnetrznyStyl{
+	color: maroon;
+	background-color: orange;
+	text-align: right !important; 
+}
+
+.mojZewnetrznyStyl2 {
+	color: maroon;
+	background-color: teal;
+	text-align: left ;
+}

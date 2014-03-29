@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test galerii</title>
+<script src="js/jquery-2.0.3.js"></script>
+<script src="js/grafiki.js"></script>
+<script type="text/javascript">
+	var grafiki = [];
+
+
+
+	$(document).ready(function(e) {
+		wybranoKatalog();
+	});
+
+	var aktElement = 0;
+
+	function wyswietl() {
+		dostosujDoZakresu();
+		var grafika = grafiki[aktElement];
+		document.getElementById("image").setAttribute("src", grafika);
+	}
+
+	function dostosujDoZakresu() {
+		if (aktElement >= grafiki.length) {
+			aktElement = 0;
+		}
+		if (aktElement < 0) {
+			aktElement = grafiki.length - 1;
+		}
+	}
+
+	function nastepnaGrafika() {
+		aktElement++;
+		wyswietl();
+	}
+
+	function poprzedniaGrafika() {
+		aktElement--;
+		wyswietl();
+	}
+
+	
+	
+
+
+	
+</script>
+</head>
+<body>
+	<div>
+		<select id=nazwaKatalogu onchange="wybranoKatalog()">
+			<option>pictures</option>
+			<option>pictures2</option>
+		</select>
+	</div>
+	<div
+		style="vertical-align: middle; display: box; box-orient: horizontal; box-pack: center; box-align: center;">
+		<div id=leftBUtton onclick="poprzedniaGrafika()"
+			style="width: 25px; display: inline-block; vertical-align: middle; background-color: red;"><-</div>
+		<div id=imageDiv
+			style="width: 50%; display: inline-block; background-color: blue; text-align: center;">
+			<img id=image style="max-width: 200px; max-height: 200px;" src="" />
+		</div>
+		<div id=rightBUtton onclick="nastepnaGrafika()"
+			style="width: 25px; display: inline-block; vertical-align: middle; background-color: red;">-></div>
+	</div>
+</body>
+</html>

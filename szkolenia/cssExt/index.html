@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Skeleton 
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20130902
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link
+	href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900"
+	rel="stylesheet" />
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="js/test.js"></script>
+<script>
+	page = "home.php";
+	prevPage = "home";
+	$(function() {
+		loadContent();
+	});
+	
+	function loadContent(){
+		$("#featured").load(page);
+	}
+	function selectPage(nazwa) {
+		document.getElementById(prevPage).className = "";
+		prevPage = nazwa;
+		document.getElementById(nazwa).className = "current_page_item";
+		page=prevPage+".php";
+		loadContent();
+	}
+</script>
+<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+
+</head>
+<body>
+	<div id="page" class="container">
+		<div id="header">
+			<div id="logo" onclick="info()">
+				<img src="images/logo-gps.png" alt="" />
+				<h1>
+					<a href="#">Privy</a>
+				</h1>
+				<span>Design by <a href="http://www.freecsstemplates.org/"
+					rel="nofollow">FreeCSSTemplates.org</a></span>
+			</div>
+			<div id="menu">
+				<ul>
+					<li id="home" class="current_page_item"><a href="#"
+						accesskey="1" title="" onclick="selectPage('home')">Homepage</a></li>
+					<li id="glowna"><a href="#" accesskey="2" title=""
+						onclick="selectPage('glowna')">Glówna</a></li>
+					<li id="podstrona1"><a href="#" accesskey="3" title=""
+						onclick="selectPage('podstrona1')">Podstrona1</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="main">
+			<div id="banner">
+				<img src="images/logo-gps.png" alt="" class="image-full" style="max-width: 200px" />
+			</div>
+			<div id="featured"></div>
+			<div id="copyright">
+				<span>Copyright (c) 2013 Sitename.com. All rights reserved. |
+					Photos by <a href="http://fotogrph.com/">Fotogrph</a>
+				</span> <span>Design by <a href="http://www.freecsstemplates.org/"
+					rel="nofollow">FreeCSSTemplates.org</a>.
+				</span>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

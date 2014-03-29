@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/54/trunk/sklep/lib/classes/Swift/Plugins/Reporters
+END
+HtmlReporter.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/54/trunk/sklep/lib/classes/Swift/Plugins/Reporters/HtmlReporter.php
+END
+HitReporter.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/54/trunk/sklep/lib/classes/Swift/Plugins/Reporters/HitReporter.php
+END

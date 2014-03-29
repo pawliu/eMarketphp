@@ -1,0 +1,5 @@
+[26-Jan-2014 13:49:34 Europe/Warsaw] Wynik zapytania o zamowienie zwrocil 0 zamiast 1
+[26-Jan-2014 12:51:47 UTC] PHP Fatal error:  Call to undefined function php_info() in C:\php\ws\sklep\index.html on line 72
+[26-Jan-2014 12:52:08 UTC] PHP Warning:  phpinfo(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in C:\php\ws\sklep\index.html on line 72
+[26-Jan-2014 12:52:08 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\php\ws\sklep\index.html:72) in C:\php\ws\sklep\utils\json.php on line 3
+[26-Jan-2014 13:52:08 Europe/Warsaw] Wynik zapytania o zamowienie zwrocil 0 zamiast 1

@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/54/trunk/sklep/lib/classes/Swift/Plugins
+END
+MessageLogger.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/54/trunk/sklep/lib/classes/Swift/Plugins/MessageLogger.php
+END
+PopBeforeSmtpPlugin.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/54/trunk/sklep/lib/classes/Swift/Plugins/PopBeforeSmtpPlugin.php
+END
+RedirectingPlugin.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/54/trunk/sklep/lib/classes/Swift/Plugins/RedirectingPlugin.php
+END
+ThrottlerPlugin.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/54/trunk/sklep/lib/classes/Swift/Plugins/ThrottlerPlugin.php
+END
+BandwidthMonitorPlugin.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/54/trunk/sklep/lib/classes/Swift/Plugins/BandwidthMonitorPlugin.php
+END
+ImpersonatePlugin.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/54/trunk/sklep/lib/classes/Swift/Plugins/ImpersonatePlugin.php
+END
+DecoratorPlugin.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/54/trunk/sklep/lib/classes/Swift/Plugins/DecoratorPlugin.php
+END
+AntiFloodPlugin.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/54/trunk/sklep/lib/classes/Swift/Plugins/AntiFloodPlugin.php
+END
+Logger.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/54/trunk/sklep/lib/classes/Swift/Plugins/Logger.php
+END
+Reporter.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/54/trunk/sklep/lib/classes/Swift/Plugins/Reporter.php
+END
+LoggerPlugin.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/54/trunk/sklep/lib/classes/Swift/Plugins/LoggerPlugin.php
+END
+Sleeper.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/54/trunk/sklep/lib/classes/Swift/Plugins/Sleeper.php
+END
+ReporterPlugin.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/54/trunk/sklep/lib/classes/Swift/Plugins/ReporterPlugin.php
+END
+Timer.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/54/trunk/sklep/lib/classes/Swift/Plugins/Timer.php
+END

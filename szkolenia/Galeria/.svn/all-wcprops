@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 30
+/svn/!svn/ver/43/trunk/Galeria
+END
+.buildpath
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/42/trunk/Galeria/.buildpath
+END
+dbProvider.php
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/43/trunk/Galeria/dbProvider.php
+END
+dostarczycielDanych.php
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/42/trunk/Galeria/dostarczycielDanych.php
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/42/trunk/Galeria/.project
+END
+gotowa.html
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/43/trunk/Galeria/gotowa.html
+END
+wlasna.html
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/43/trunk/Galeria/wlasna.html
+END

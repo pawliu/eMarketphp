@@ -1,0 +1,24 @@
+@CHARSET "UTF-8";
+
+head,body{
+	background-color: red;
+}
+
+tr,table {
+	background-color: green;
+	border: 2px;
+	border-color: gray;
+	border-style: outset;
+}
+
+td{
+	border-color: gray;
+	border-style: outset;
+	border-left: none;
+	border-right: none;
+	border: none;
+}
+
+th {
+	border: 0px;
+}

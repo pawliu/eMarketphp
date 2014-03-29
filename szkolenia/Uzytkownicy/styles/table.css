@@ -1,0 +1,19 @@
+@CHARSET "UTF-8";
+
+tr,table {
+	border: 2px;
+	border-color: gray;
+	border-style: outset;
+}
+
+td{
+	border-color: gray;
+	border-style: outset;
+	border-left: none;
+	border-right: none;
+	border: none;
+}
+
+th {
+	border: 0px;
+}

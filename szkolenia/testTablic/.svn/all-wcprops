@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 33
+/svn/!svn/ver/44/trunk/testTablic
+END
+.buildpath
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/44/trunk/testTablic/.buildpath
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/44/trunk/testTablic/.project
+END
+index.php
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/44/trunk/testTablic/index.php
+END

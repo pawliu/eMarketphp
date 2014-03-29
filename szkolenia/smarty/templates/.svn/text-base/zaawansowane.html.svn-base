@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link type="text/css" href="css/css.css" rel="stylesheet" />
+<script type="text/javascript">
+	var section = 2;
+	function a() {section = 1;
+	}
+</script>
+<title>Zaawansowane el SMARTY</title>
+</head>
+<body>
+	<div>Iteracja po tablicy:</div>
+	{$i=0} {section name=idx loop=$tablica} {if ($i % 2) == 0}
+	<div class="parzyste">{$tablica[idx]}</div>
+	{else}
+	<div class="nieparzyste">{$tablica[idx]}</div>
+	{/if} {$i=$i+1} {/section}
+</body>
+</html>

@@ -1,0 +1,8 @@
+@CHARSET "UTF-8";
+.parzyste {
+	background-color: aqua;
+}
+
+.nieparzyste {
+	background-color: lime;
+}

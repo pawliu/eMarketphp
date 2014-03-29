@@ -1,0 +1,32 @@
+@CHARSET "UTF-8";
+.koszykDiv{
+	background-image: url("koszyk.jpg");
+	width: 24px;
+	height: 19px;
+	display: inline-block;
+}
+.guzikMenu,.guzikTabeli {
+	width: 100px;
+	display: inline;
+	text-decoration: none;
+	color: black;
+}
+
+.guzikMenu {
+	background-color: menu;
+	color: red;
+}
+
+.naglowekTabeli {
+	display: block;
+	background-color: rgb(192, 192, 192);
+}
+
+.wierszTabeli {
+	display: block;
+	background-color: rgba(192, 192, 192, 0.5)
+}
+.mainError{
+	color: red;
+	background-color: yellow;
+}

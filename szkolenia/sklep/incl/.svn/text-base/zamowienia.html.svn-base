@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<?php
+	require_once '../session/sesje.php';
+	function uzytkownikZalogowany(){
+				$daneUzytkownika = odczytajZSesji ( "daneUzytkownika" );
+				if($daneUzytkownika){
+					return true;
+				}else{
+					return false;
+				} 
+}
+if(!uzytkownikZalogowany()){
+		include 'incl/niezalogowany.html';
+}else{
+?>
+	Moje zamówienia:
+	<div>
+		<div class=naglowekTabeli>
+			<div style="display: inline-block; width: 20%">Data zamówienia
+			</div>
+			<div style="display: inline-block; width: 20%">Status
+				zamówienia</div>
+		</div>
+		<?php require_once 'repozytoriumZamowien.php';
+			$zamowienia=znajdzZamowieniaUzytkownika();
+			foreach($zamowienia as $zamowienie){
+		?>
+		<a class="guzikTabeli" href=index.html?widok=zamowienie.php&id=<?php
+			echo $zamowienie->id ?>>
+			<div class=wierszTabeli>
+				<div style="display: inline-block; width: 20%">
+					<?php echo $zamowienie->data ?>
+				</div>
+				<div style="display: inline-block; width: 20%">
+					<?php echo $zamowienie->status ?>
+				</div>
+			</div>
+		</a>
+		<?php
+			}
+		?>
+	</div>
+	<?php } ?>
+</body>
+</html>

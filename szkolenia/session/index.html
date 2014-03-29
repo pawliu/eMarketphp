@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Logowanie</title>
+<script type="text/javascript" src="js/jquery-2.0.3.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("#uzytkownik").load("login.html");
+	});
+</script>
+</head>
+<body>
+	<div id=header style="width: 100%; direction: rtl;">
+		<div id=uzytkownik></div>
+	</div>
+	<div style="width: 20%;conoverflow: hidden;display: inline-block;">
+		<?php include 'data.php'; ?>
+	</div>
+	<div style="width: 75%;overflow: hidden;display: inline-block;">
+		<?php include 'data.php'; ?>
+		<div ><label id=id123>A</label></div>
+	</div>
+	<div style="width: 100%;display: inline-block;">
+		<?php include 'data.php'; ?>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<script type="text/javascript">
+	function zalogujSynchronicznie(nazwaUzytkownika, wartoscHasla, funkcjaNaOk,
+			funkcjaNaBlad) {
+		request = $.ajax({
+			async : false,
+			url : "../session/login.php",
+			data : {
+				uzytkownik : nazwaUzytkownika,
+				haslo : wartoscHasla
+			},
+			type : "post"
+		});
+		request.done(function(odpowiedz, textStatus, jqXHR) {
+			if (odpowiedz.wynik) {
+				funkcjaNaOk()
+			} else {
+				funkcjaNaBlad();
+			}
+		});
+		request.fail(function(jqXHR, textStatus, errorThrown) {
+			funkcjaNaBlad();
+		});
+	}
+	function zaloguj() {
+		var nazwaUzytkownika = document.getElementById("uzytkownik2").value;
+		var haslo = document.getElementById("haslo").value;
+		zalogujSynchronicznie(nazwaUzytkownika, haslo, function() {
+			alert("Zalogowano pomyślnie");
+			zalogowany = true;
+			pokazDaneZalogowania();
+		}, function() {
+			console.error("Blad logowania");
+		});
+	}
+</script>
+<meta charset="UTF-8">
+<div style="width: 100%">
+	<div style="width: 100%; direction: rtl;">
+		<input required="required" id=uzytkownik2 style="text-align: left" /><label
+			style="width: 200px; min-width: 200px; text-align: right;">Użytkownik</label>
+	</div>
+	<div style="width: 100%; direction: rtl;">
+		<input name="Haslo" id=haslo style="text-align: left" type="password" />
+		<label style="width: 200px; min-width: 200px; text-align: right;">Haslo</label>
+	</div>
+	<div style="direction: rtl">
+		<button id=zaloguj onclick="zaloguj()">Zaloguj</button>
+	</div>
+</div>

@@ -1,0 +1,109 @@
+<script>
+	var produkty = <?php require 'produkty.php'; ?>;
+	var kategorie = <?php require 'kategorie.php'; ?>;
+	var idZGET= <?php if(isset($_GET['kategoriaID'])){
+		echo $_GET['kategoriaID'].";";
+	} else{
+		echo 'null;';
+	}?>
+	var pokazDodajDoKoszyka = false;
+	$(function() {
+		zarejestrujSluchaczaNaZdarzenie('zalogowano', naZalogowanie);
+		zarejestrujSluchaczaNaZdarzenie('wylogowano', naWylogowanie);
+		pokazDodajDoKoszyka = zalogowanyMain;
+		zbudujWiersze();
+		zbudujKategorie();
+	});
+
+	function zbudujKategorie() {
+		var kategorieDiv = document.getElementById('kategorie');
+		kategorieDiv.innerHTML = "Kategorie";
+		pokazKategorieNaPoziomie(kategorie, 0, kategorieDiv);
+	}
+
+	function pokazKategorieNaPoziomie(kategoria, poziom, rodzic) {
+		var id=kategoria.id;
+		var wiersz = document.createElement('div');
+		wiersz.style = "padding-left: 10px";
+		var plus = document.createElement('span');
+		plus.innerHTML = '+';
+		plus.addEventListener('click', function() {
+			$("#dzieci" + id).toggle();
+		}, false);
+		wiersz.appendChild(plus);
+		var link = document.createElement('a');
+		link.href = "index.html?widok=incl/produkty.html&kategoriaID="
+				+ id;
+		link.textContent = kategoria.nazwa;
+		wiersz.appendChild(link);
+		var divDzieci = document.createElement('div');
+		divDzieci.id = 'dzieci' + id;
+
+		var widoczne = false;
+		for (var i = 0; i < kategoria.dzieci.length; i++) {
+			var dziecko = kategoria.dzieci[i];
+			if (pokazKategorieNaPoziomie(dziecko, poziom + 1, divDzieci)) {
+				widoczne = true;
+			}
+		}
+		if (!widoczne) {
+			divDzieci.style = "display: none;"
+		}
+		wiersz.appendChild(divDzieci);
+		rodzic.appendChild(wiersz);
+		return widoczne || id == idZGET;
+	}
+
+	function naZalogowanie(event) {
+		pokazDodajDoKoszyka = true;
+		zbudujWiersze();
+	}
+
+	function naWylogowanie(event) {
+		pokazDodajDoKoszyka = false;
+		zbudujWiersze();
+	}
+
+	function zbudujWiersze() {
+		var gridDiv = document.getElementById('listaProd');
+		gridDiv.innerHTML = "Produkty";
+		for (var i = 0; i < produkty.length; i++) {
+			var produkt2 = produkty[i];
+			var wiersz = document.createElement('div');
+			wiersz.id = 'wiersz' + produkt2.id;
+			wiersz.className = "wierszTabeli";
+			wiersz.appendChild(zbudujLink(produkt2));
+			if (pokazDodajDoKoszyka) {
+				var dodaj = "<div onclick='dodajDoKoszyka(" + produkt2.id
+						+ ")'class='koszykDiv'></div>";
+				wiersz.innerHTML += dodaj;
+			}
+			gridDiv.appendChild(wiersz);
+		}
+	}
+
+	function zbudujLink(produkt) {
+		var url = "#" + produkt.id;
+		var text = produkt.nazwa + " " + produkt.cena;
+		var link = document.createElement('a');
+		link.href = url;
+		link.textContent = text;
+		var div = document.createElement('div');
+		div.style = "width: 500px;display: inline-block;";
+		div.appendChild(link);
+		return div;
+		//return "<a href='"+url+"'>"+text+"</a>";
+	}
+
+	function dodajDoKoszyka(id) {
+		odlozDoKoszyka(id, function() {
+			odswKoszyk()
+		}, function(opisBledu) {
+			alert("ERROR" + opisBledu)
+		});
+	}
+</script>
+<div>
+	<div id=kategorie style="width: 150; display: inline-block;">Kategorie</div>
+	<div id=listaProd style="display: inline-block; vertical-align: top;"></div>
+</div>

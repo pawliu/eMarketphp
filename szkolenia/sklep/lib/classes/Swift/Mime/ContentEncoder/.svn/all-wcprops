@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/54/trunk/sklep/lib/classes/Swift/Mime/ContentEncoder
+END
+NativeQpContentEncoder.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/54/trunk/sklep/lib/classes/Swift/Mime/ContentEncoder/NativeQpContentEncoder.php
+END
+RawContentEncoder.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/54/trunk/sklep/lib/classes/Swift/Mime/ContentEncoder/RawContentEncoder.php
+END
+QpContentEncoderProxy.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/54/trunk/sklep/lib/classes/Swift/Mime/ContentEncoder/QpContentEncoderProxy.php
+END
+PlainContentEncoder.php
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/54/trunk/sklep/lib/classes/Swift/Mime/ContentEncoder/PlainContentEncoder.php
+END
+QpContentEncoder.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/54/trunk/sklep/lib/classes/Swift/Mime/ContentEncoder/QpContentEncoder.php
+END
+Base64ContentEncoder.php
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/54/trunk/sklep/lib/classes/Swift/Mime/ContentEncoder/Base64ContentEncoder.php
+END

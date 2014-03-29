@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/54/trunk/sklep/lib/classes/Swift/Mime
+END
+MimeEntity.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/54/trunk/sklep/lib/classes/Swift/Mime/MimeEntity.php
+END
+HeaderFactory.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/54/trunk/sklep/lib/classes/Swift/Mime/HeaderFactory.php
+END
+CharsetObserver.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/54/trunk/sklep/lib/classes/Swift/Mime/CharsetObserver.php
+END
+ContentEncoder.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/54/trunk/sklep/lib/classes/Swift/Mime/ContentEncoder.php
+END
+SimpleHeaderSet.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/54/trunk/sklep/lib/classes/Swift/Mime/SimpleHeaderSet.php
+END
+Attachment.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/54/trunk/sklep/lib/classes/Swift/Mime/Attachment.php
+END
+EmbeddedFile.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/54/trunk/sklep/lib/classes/Swift/Mime/EmbeddedFile.php
+END
+ParameterizedHeader.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/54/trunk/sklep/lib/classes/Swift/Mime/ParameterizedHeader.php
+END
+MimePart.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/54/trunk/sklep/lib/classes/Swift/Mime/MimePart.php
+END
+Message.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/54/trunk/sklep/lib/classes/Swift/Mime/Message.php
+END
+Grammar.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/54/trunk/sklep/lib/classes/Swift/Mime/Grammar.php
+END
+SimpleMimeEntity.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/54/trunk/sklep/lib/classes/Swift/Mime/SimpleMimeEntity.php
+END
+EncodingObserver.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/54/trunk/sklep/lib/classes/Swift/Mime/EncodingObserver.php
+END
+SimpleHeaderFactory.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/54/trunk/sklep/lib/classes/Swift/Mime/SimpleHeaderFactory.php
+END
+Header.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/54/trunk/sklep/lib/classes/Swift/Mime/Header.php
+END
+HeaderEncoder.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/54/trunk/sklep/lib/classes/Swift/Mime/HeaderEncoder.php
+END
+SimpleMessage.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/54/trunk/sklep/lib/classes/Swift/Mime/SimpleMessage.php
+END
+HeaderSet.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/54/trunk/sklep/lib/classes/Swift/Mime/HeaderSet.php
+END

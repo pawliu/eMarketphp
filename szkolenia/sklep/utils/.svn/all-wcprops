@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/svn/!svn/ver/59/trunk/sklep/utils
+END
+json.php
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/47/trunk/sklep/utils/json.php
+END
+utils.php
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/59/trunk/sklep/utils/utils.php
+END
+sqlUtils.php
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/49/trunk/sklep/utils/sqlUtils.php
+END

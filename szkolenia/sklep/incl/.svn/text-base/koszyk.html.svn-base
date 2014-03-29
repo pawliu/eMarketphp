@@ -1,0 +1,57 @@
+<script type="text/javascript">
+	$(function() {
+		getZawartoscKoszyka(zbudujWiersze);
+	});
+	var zawartoscKoszyka = [];
+	function zbudujWiersze(elementyKoszyka) {
+		zawartoscKoszyka = elementyKoszyka;
+		var gridDiv = document.getElementById('listaWKoszyku');
+		for (var i = 0; i < elementyKoszyka.length; i++) {
+			var produkt = elementyKoszyka[i];
+			var wiersz = document.createElement('div');
+			wiersz.className = 'wierszTabeli';
+			wiersz.appendChild(zbudujLink(produkt.nazwa, "60%"));
+			wiersz.appendChild(zbudujLink(produkt.ilosc, "15%"));
+			wiersz.appendChild(zbudujLink(produkt.ilosc * produkt.cena, "10%"));
+			gridDiv.appendChild(wiersz);
+		}
+	}
+
+	function zbudujLink(tresc, szerokosc) {
+		var text = document.createElement('div');
+		text.innerHTML = tresc;
+		text.style = "display: inline-block; width: " + szerokosc;
+		return text;
+
+	}
+
+	function pokazFormZamowienia() {
+		$("#zamowienie").show();
+		$('#pokazFormButton').hide();
+		$('#elementy').val(JSON.stringify(zawartoscKoszyka));
+	}
+</script>
+<meta charset="UTF-8">
+<div id=listaWKoszyku style="width: 75%">
+	<div class="naglowekTabeli">
+		<div style="display: inline-block; width: 60%">Nazwa produktu</div>
+		<div style="display: inline-block; width: 15%">Ilosc</div>
+		<div style="display: inline-block; width: 10%">Wartosc</div>
+	</div>
+</div>
+<button id=pokazFormButton onclick="pokazFormZamowienia()">Zamów</button>
+<div id="zamowienie" style="display: none; text-align: right;">
+	<form action="index.html" method="POST" style="text-align: left">
+		<input type="text" hidden="true" name=widok value=zamowienie.php /> <input
+			type="text" hidden="true" name=elementy id=elementy />
+		<div style="display: inline-block;">
+			<label for="adres">Adres wysylki</label></br></br> <label for="komentarz">Komentarz</label></br></br>
+		</div>
+		<div style="display: inline-block;">
+			<textarea type="text" name=adres id=adres ></textarea></br> <textarea type="text"
+				name=komentarz id=komentarz ></textarea></br>
+		</div>
+		<input type="submit" name="Zapisz" value="Zamów"/>
+
+	</form>
+</div>

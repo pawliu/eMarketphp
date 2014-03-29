@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+</head>
+<body>
+	<script type="text/javascript">
+		$(function() {
+			<?php if(metodaPost ()){ ?>
+			document.cookie = "koszyk=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+			odswKoszyk();
+			<?php }?>
+		});
+	</script>
+	<div>
+		<div style="display: inline-block; text-align: right;" id=labele>
+			<div>
+				<label>Data</label>
+			</div>
+			<div>
+				<label for="uzytkownik">Uzytkownik</label>
+			</div>
+			<div>
+				<label>Status</label>
+			</div>
+			<div>
+				<label>Adres</label>
+			</div>
+			<div>
+				<label>Komentarz</label>
+			</div>
+		</div>
+		<div style="display: inline-block;" id=wartosci>
+			<div id=data>
+				<?php echo $zamowienie->data ?>
+			</div>
+			<div id=uzytkownik>
+				<?php echo $zamowienie->idUzytkownika ?>
+			</div>
+			<div id=status>
+				<?php echo $zamowienie->status ?>
+			</div>
+			<div id=adres>
+				<?php echo $zamowienie->adres ?>
+			</div>
+			<div id=komentarz>
+				<?php echo $zamowienie->komentarz ?>
+			</div>
+		</div>
+		<div style="width: 75%">
+			<div class="naglowekTabeli">
+				<div style="display: inline-block; width: 60%">Nazwa produktu</div>
+				<div style="display: inline-block; width: 15%">Ilosc</div>
+				<div style="display: inline-block; width: 10%">Wartosc</div>
+			</div>
+			<?php
+		foreach($zamowienie->elementy as $element){
+		?>
+			<div class=wierszTabeli>
+				<div style="display: inline-block; width: 60%">
+					<?php echo $element->nazwa; ?>
+				</div>
+				<div style="display: inline-block; width: 15%">
+					<?php echo $element->ilosc." x ".$element->cena; ?>
+				</div>
+				<div style="display: inline-block; width: 10%">
+					<?php echo $element->ilosc*$element->cena; ?>
+				</div>
+			</div>
+			<?php 
+		}
+		?>
+		</div>
+	</div>
+</body>
+</html>

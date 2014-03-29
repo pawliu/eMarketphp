@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/!svn/ver/2/trunk/sql_base/skrypty
+END
+init.sql
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/2/trunk/sql_base/skrypty/init.sql
+END
+drop.sql
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/2/trunk/sql_base/skrypty/drop.sql
+END

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<?php error_reporting(E_ERROR); ?>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Koszyk</title>
+<link type="text/css" href="css/style.css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery-2.0.3.js"></script>
+<script type="text/javascript" src="js/koszyk.js"></script>
+<script type="text/javascript" src="js/simple.datagrid.js"></script>
+<script type="text/javascript">
+	var zalogowanyMain = false;
+	$(function() {
+		zainicjalizujMostek();
+		zainicjalizujSluchaczyZdarzen();
+				
+		pokazDaneZalogowania();
+		odswKoszyk();
+	});
+
+	function zainicjalizujSluchaczyZdarzen() {
+		document.getElementById('klawiszPokazKoszyk').addEventListener("click",
+				function() {
+					zaladujWidok('koszyk')
+				}, true);
+		zarejestrujSluchaczaNaZdarzenie('zalogowano', naZalogowanieMain);
+		zarejestrujSluchaczaNaZdarzenie('wylogowano', pokazMenuNiezalogowanego);
+		zarejestrujSluchaczaNaZdarzenie('zalogowano', pokazKoszykZalogowanego);
+		zarejestrujSluchaczaNaZdarzenie('wylogowano', pokazKoszykNieZalogowanego);
+	}
+
+	function zainicjalizujMostek() {
+		definiujTransferZdarzenia('daneZalogowania', 'zalogowany', 'zalogowano')
+		definiujTransferZdarzenia('daneZalogowania', 'wylogowany', 'wylogowano')
+	}
+
+	function zarejestrujSluchaczaNaZdarzenie(typZdarzenia, sluchacz) {
+		document.getElementById('eventBridge').addEventListener(typZdarzenia,
+				sluchacz, false);
+	}
+
+	function definiujTransferZdarzenia(zKomponentu, typZrodlowy, typDocelowy) {
+		document.getElementById(zKomponentu)
+				.addEventListener(
+						typZrodlowy,
+						function(e) {
+							var event = new Event(typDocelowy);
+							event.bubbles = true;
+							document.getElementById('eventBridge')
+									.dispatchEvent(event);
+						}, true);
+	}
+
+	function zaladujWidok(nazwaWidoku) {
+		//$("#content").load("incl/" + nazwaWidoku + ".html");
+	}
+
+	function odswKoszyk() {
+		getIloscWKoszyku(ustawIloscWKosz);
+	}
+	function ustawIloscWKosz(ilosc) {
+		document.getElementById('iloscWKosz').textContent = ilosc;
+	}
+
+	function pokazMenuNiezalogowanego(event) {
+		zalogowanyMain = false;
+		zmianaZalogowania();
+	}
+	function pokazKoszykZalogowanego(event) {
+		$("#koszykZal").show();
+		$("#koszykNiezal").hide();
+	}
+
+	function pokazKoszykNieZalogowanego(event) {
+		$("#koszykZal").hide();
+		$("#koszykNiezal").show();
+	}
+
+	function naZalogowanieMain(event) {
+		zalogowanyMain = true;
+		zmianaZalogowania();
+	}
+
+	function zmianaZalogowania() {
+		/*
+		if (zalogowanyMain) {
+			$("#mojeZam").show();
+		} else {
+			$("#mojeZam").hide();
+		}
+		*/
+
+	}
+</script>
+
+</head>
+<body>
+	<div id=eventBridge style="display: none; width: 0px; height: 0px"></div>
+	<div id=login style="display: inline-block;">
+		<?php include '../session/login.html' ?>
+	</div>
+	<div id=koszyk onclick="odswKoszyk()"
+		style="text-align: right; display: inline-block;">
+		<div id=koszykZal>
+			Ilość elementów w koszyku: <label id=iloscWKosz>0</label> <a
+				href="index.html?widok=incl/koszyk.html" id=klawiszPokazKoszyk>Pokaz
+				koszyk</a>
+		</div>
+		<div id=koszykNiezal>Zaloguj sie aby zobaczyc koszyk.</div>
+
+	</div>
+	<div>
+		<a class=guzikMenu href=index.html?widok=incl/home.html><div
+				class=guzikMenu>Glowna</div></a> <a class=guzikMenu
+			href=index.html?widok=incl/produkty.html><div class=guzikMenu>Produkty</div></a>
+		<a id=mojeZam class=guzikMenu
+			href=index.html?widok=incl/zamowienia.html><div class=guzikMenu>Moje
+				zamowienia</div></a>
+	</div>
+	<div id=content>
+		<?php
+		$widok="incl/home.html";
+	if(isset($_GET['widok'])){
+		$widok=$_GET['widok'];		
+	}else{
+		if(isset($_POST['widok'])){
+			$widok=$_POST['widok'];			 
+		}
+	}
+include $widok; 
+	?>
+	</div>
+</body>
+</html>

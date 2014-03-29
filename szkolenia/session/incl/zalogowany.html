@@ -1,0 +1,47 @@
+<script>
+	$(function() {
+		document.getElementById("wylogujLink").addEventListener("click",
+				akcjaWyloguj, true);
+	});
+
+	function wylogowanieOk() {
+		alert("Wylogowano pomyślnie");
+		zalogowany=false;
+		pokazDaneZalogowania();
+	}
+
+	function wylogowanieBlad() {
+		console.error("Blad przy wylogowaniu");
+	}
+
+	function akcjaWyloguj(e) {
+		wylogujSynchronicznie(wylogowanieOk, wylogowanieBlad);
+	}
+	function wylogujSynchronicznie(funkcjaNaOk, funkcjaNaBlad) {
+		request = $.ajax({
+			async : false,
+			url : "../session/wyloguj.php",
+			type : "post"
+		});
+		request.done(function(odpowiedz, textStatus, jqXHR) {
+			if (odpowiedz.wynik) {
+				funkcjaNaOk()
+			} else {
+				funkcjaNaBlad();
+			}
+		});
+		request.fail(function(jqXHR, textStatus, errorThrown) {
+			funkcjaNaBlad();
+		});
+	}
+</script>
+<meta charset="UTF-8">
+<div>
+	<?php
+	include '../sesje.php';
+	require_once '../ImieNazwisko.php';
+	$daneUzytkownika = odczytajZSesji ( "daneUzytkownika" );
+	echo "Witaj " . $daneUzytkownika->imie . " " . $daneUzytkownika->getNazwisko () . "</br>";
+?>
+	<a href="#" id="wylogujLink">Wyloguj</a>
+</div>

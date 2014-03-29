@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/jquery-2.0.3.js"></script>
+<script type="text/javascript">
+	var myVar = setInterval(stoper, 1000);
+	var wartosc = 0;
+	function stoper() {
+		var sec = (wartosc % 60);
+		var min = (parseInt((wartosc) / 60, 0)) % 60;
+		var godz = parseInt((wartosc) / (60 * 60));
+		html2 = godz + ":" + min + ":" + sec;
+		$("#zegar").html(html2);
+		wartosc += 1;
+
+		dataHtml = "Aktualna data " + new Date().toLocaleString();
+		$("#aktData").html(dataHtml);
+	}
+</script>
+</head>
+<body>
+	<div id=zegar>0:0:0</div>
+	<div id=aktData>Aktualna data</div>
+</body>
+</html>

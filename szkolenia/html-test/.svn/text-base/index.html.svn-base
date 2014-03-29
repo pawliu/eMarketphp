@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HTML</title>
+
+<link rel="Stylesheet" type="text/css" href="styles/content.css" />
+<!-- -->
+</head>
+<body>
+	<!-- 
+		 -->
+	<ul>
+		<li style="list-style-type: georgian;">1.</li>
+		<li style="list-style-type: georgian;">2.</li>
+	</ul>
+	<ol>
+		<li>1.</li>
+		<li>2.</li>
+	</ol>
+
+	<div style="width: 100%">100%</div>
+	<div id="main" class="main">
+		<div class="header" style="background-color: white;">
+			Naglówek
+			<div>Div in header div</div>
+		</div>
+		<div class="menu">Menu</div>
+
+		<div class="content" id="contentId">
+			Treśćsssssssssssssssssssd assssssssssss assssssssss </br>
+			<div style="height: 12px"></div>
+			<a href='www.google.pl'>google</a>
+			<?php include('test.php'); ?>
+			<!-- 
+			<?php for($i=0;$i<5;$i++){ ?>			
+			"Wartość" 
+			<?php echo $i ?>
+			</br>
+			<?php } ?>
+			 -->
+
+		</div>
+		<div class="footer">Stopka</div>
+		<div class="tooltip" style="visibility: visible;">Tooltip</div>
+	</div>
+</body>
+</html>
