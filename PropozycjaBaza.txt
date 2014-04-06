@@ -1,0 +1,24 @@
+﻿Wstawiłem przykładowe dane do bazy przeglądając.
+
+Czym się różni products od towary?
+Brak szczegółów zamówienia -nie marzę o blokowaniu towarów na czas zamówienia/choć mamy już przykładowy kod SQL/
+, ale o zapamiętaniu co zosatło zamówione dla pakowacza i klienta
+
+Propozycje rozbudowy zmian:
+
+Raporty finansowe:
+pobierz przychody na poszczególnych towarach z określonego okresu czasu
+//nie będzie raportu zysków ze względu na brak magazynu.
+
+UWAGA używa nieistniejącej tabeli: produktyZamowienia(id, Idzamowienia, idtowaru,ilosc, wartosc,cenaHistoryczna)
+
+select t.nazwa, t.cena, g.dzien, g.godzinydostawy_idgodziny, COUNT(g.godzinydostawy_idgodziny) from towary t
+inner join 
+inner join grafik g
+inner join 
+
+Raport zarządzczy:
+Kiedy włączyć promocję na dany produkt lub dostawę.
+Dostaw(dzień godzina ilość, sortuj po dzień tygodnia i godzina malejąco)
+
+Promocja produkt
